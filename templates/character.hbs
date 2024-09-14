@@ -1,0 +1,52 @@
+<div class="character-info">
+    <div class="character-info-top">
+        <form class="character-attrs">
+            <div class="bar-wrapper">
+                <div class="attr">
+                    <label>{{localize "LIGHTSOUTSD.luck"}}</label>
+                    <span>{{luck}}</span>
+                </div>
+
+                <div class="attr">
+                    <label>{{localize "LIGHTSOUTSD.ac"}}</label>
+                    <span>{{armor}}</span>
+                </div>
+            </div>
+        </form>
+
+        <div class="character-picture">
+            <img class="character-img" src="{{picture}}" alt="{{name}}" />
+
+            <div class="sheet" data-character="{{id}}">
+                {{localize "LIGHTSOUTSD.open_sheet"}}
+            </div>
+
+            <div class="character-level">
+                <div class="character-level-badge"></div>
+                <span>{{level}}</span>
+            </div>
+        </div>
+
+        <div class="character-health">
+            <div class="bar-wrapper">
+                <div class="bar {{hp.status}}" style="width: {{hp.percent}}%"></div>
+
+                <input type="text" id="current-health" data-value="{{hp.value}}" data-id="{{id}}"
+                    value="{{hp.value}}" />
+                <span class="divider">/</span>
+                <input type="text" value="{{hp.max}}" disabled />
+            </div>
+        </div>
+
+    </div>
+
+    <div class="character-details">
+        <div class="character-name">
+            {{name}}
+        </div>
+
+        <div class="character-race-class">
+            {{title}} {{class}}
+        </div>
+    </div>
+</div>
