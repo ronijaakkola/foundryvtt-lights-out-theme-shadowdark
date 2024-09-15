@@ -3,8 +3,9 @@ name: Creating a release
 on:
   release:
     types: [published]
-  permissions:
-    contents: write
+
+permissions:
+  contents: write
 
 jobs:
   build:
