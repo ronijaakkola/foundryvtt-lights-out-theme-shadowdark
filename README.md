@@ -6,7 +6,7 @@ While the theme is in beta, it is only possible to install it by adding the mani
 1. Go to the FoundryVTT admin view
 2. Go to the "Add-on Modules" tab
 3. Select "Install Module"
-4. Paste the URL `https://github.com/ronijaakkola/foundryvtt-lights-out-theme-shadowdark/releases/download/v0.1/module.json` to the "Manifest URL".
+4. Paste the URL `https://github.com/ronijaakkola/foundryvtt-lights-out-theme-shadowdark/releases/download/latest/module.json` to the "Manifest URL".
 5. Press "Install" button.
 
 ## Features
