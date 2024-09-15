@@ -20,6 +20,16 @@ While the theme is in beta, it is only possible to install it by adding the mani
 - Hiding unnecessary UI elements from players (navigation, player list, hotbar)
 - Improved dark mode UI for Shadowdark's chat messages
 
+## Recommended companion modules
+Some features have already been well implemented and tested in other modules. Some recommended modules to finish the look are:
+
+- [Chat Portraits](https://foundryvtt.com/packages/chat-portrait) to show token art in chat messages
+  - _Portait size 36px, border color #e8e8e8, border width 2px_
+- [Hide Player UI](https://foundryvtt.com/packages/hide-player-ui) to hide unnecessary sidebar tabs
+  - _I generally hide Combat Tracker, Scenes, Rollable Tables, Card Stacks and Compendium tabs_
+- [Carousel Combat Tracker](https://foundryvtt.com/packages/combat-tracker-dock) for a sleek combat tracker
+- [Lock View](https://foundryvtt.com/packages/LockView/) for TotM scenes
+  
 ## Supported modules
 Since this module heavily alters Foundry's look and elements, some other modules may not work properly with it. If you are using a module that does not work, consider opening a pull request or opening an issue to add support for it.
 
