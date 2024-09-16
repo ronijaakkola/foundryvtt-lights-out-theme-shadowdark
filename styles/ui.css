@@ -49,6 +49,11 @@
   --color-shadow-highlight: var(--color-primary-medium);
   --color-border-highlight: var(--color-primary-medium);
   --color-border-highlight-alt: var(--color-primary-medium);
+
+  /**
+    * Overriding Foundry variable styles
+    */
+  --sidebar-width: 320px;
 }
 
 * {
@@ -377,7 +382,7 @@ div#camera-views #players {
 
 #controls {
   position: fixed;
-  right: 290px;
+  right: 310px;
   opacity: 1;
   flex-grow: 0 !important;
   flex-shrink: 1 !important;
