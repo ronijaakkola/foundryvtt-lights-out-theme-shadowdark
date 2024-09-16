@@ -3,5 +3,7 @@
 	"LIGHTSOUTSD.luck": "Luck",
 	"LIGHTSOUTSD.open_sheet": "Open sheet",
 	"LIGHTSOUTSD.config_party_only_active": "Show only active characters",
-	"LIGHTSOUTSD.config_party_only_active_help": "Show only characters of online players in the left panel"
+	"LIGHTSOUTSD.config_party_only_active_help": "Show only characters of online players in the left panel",
+	"LIGHTSOUTSD.config_hide_pc_title": "Hide PCs title and class",
+	"LIGHTSOUTSD.config_hide_pc_title_help": "Hide PCs title and class below the character panel"
 }

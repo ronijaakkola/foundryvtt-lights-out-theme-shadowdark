@@ -51,6 +51,16 @@ Hooks.once('ready', () => {
     type: Boolean,
     default: false
   });
+
+  game.settings.register("lights-out-theme-shadowdark", "hide-pc-title", {
+    name: game.i18n.localize("LIGHTSOUTSD.config_hide_pc_title"),
+    hint: game.i18n.localize("LIGHTSOUTSD.config_hide_pc_title_help"),
+    scope: "world",
+    config: true,
+    requiresReload: true,
+    type: Boolean,
+    default: false
+  });
 });
 
 function activatePlayerListeners() {
@@ -117,6 +127,11 @@ async function renderCharacter() {
   const data = await characterData(character);
   if (!data) return;
 
+  const settings = {
+    hide_title: game.settings.get("lights-out-theme-shadowdark", "hide-pc-title"),
+  }
+  data.settings = settings;
+
   const tpl = await renderTemplate(
     "modules/lights-out-theme-shadowdark/templates/character.hbs",
     data
@@ -132,7 +147,7 @@ async function renderParty() {
   const characters = await Promise.all(getPartyCharacters().map(characterData));
 
   const tpl = await renderTemplate("modules/lights-out-theme-shadowdark/templates/party.hbs", {
-    characters,
+    characters
   });
 
   elem.innerHTML = tpl;
