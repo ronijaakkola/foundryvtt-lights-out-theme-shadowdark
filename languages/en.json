@@ -3,9 +3,11 @@
 	"LIGHTSOUTSD.luck": "Luck",
 	"LIGHTSOUTSD.open_sheet": "Open sheet",
 	"LIGHTSOUTSD.config_party_only_active": "Show only active characters",
-	"LIGHTSOUTSD.config_party_only_active_help": "Show only characters of online players in the left panel",
-	"LIGHTSOUTSD.config_hide_pc_title": "Hide PCs title and class",
-	"LIGHTSOUTSD.config_hide_pc_title_help": "Hide PCs title and class below the character panel",
+	"LIGHTSOUTSD.config_party_only_active_help": "Show only characters of online players in the left panel. This may be useful if all players are not present in a game or you are running an open game.",
+	"LIGHTSOUTSD.config_hide_pc_title": "Hide PC's title and class",
+	"LIGHTSOUTSD.config_hide_pc_title_help": "Hide PC's title and class below the character name in the character panel.",
 	"LIGHTSOUTSD.config_disable_gm_selected_token": "Do not show GM's selected token",
-	"LIGHTSOUTSD.config_disable_gm_selected_token_help": "Disable showing GM's selected token in the character panel"
+	"LIGHTSOUTSD.config_disable_gm_selected_token_help": "Disable showing GM's selected token information in the character panel.",
+	"LIGHTSOUTSD.config_show_player_hotbar": "Show hotbar for players",
+	"LIGHTSOUTSD.config_show_player_hotbar_help": "By default, this theme hides the hotbar for players. If you want to show it, enable this option. This may be useful if your players need to be able to use macros quickly."
 }
