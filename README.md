@@ -16,6 +16,7 @@ While the theme is in beta, it is only possible to install it by adding the mani
   - Showing general character info (HP, AC, luck, name, title and class)
   - Quick access to the character sheet
   - Quickly changing hit points
+  - An option to show GM's selected token in character panel
 - A party panel, features
   - Showing all party members and their hit points
   - Quickly changing hit points of a certain party member
