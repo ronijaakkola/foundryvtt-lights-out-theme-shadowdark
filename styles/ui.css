@@ -347,13 +347,18 @@ a.inline-roll {
 #hotbar {
   opacity: 0.2;
   position: fixed;
-  bottom: 0.5rem;
-  left: 25%;
+  top: 0.5rem;
+  left: 0;
+  margin: 10px 0px 0px 10px;
   transition: opacity 250ms ease-in-out;
 }
 
 #hotbar:hover {
   opacity: 1;
+}
+
+#hotbar .macro .macro-key {
+  background: none;
 }
 
 #players.hidden {
