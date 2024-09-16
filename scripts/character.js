@@ -44,11 +44,11 @@ export async function characterData(c) {
     id: c.id,
     name: c.name,
     level: level.value,
-    ancestry: ancestryData.name,
-    class: classData.name,
+    ancestry: ancestryData?.name,
+    class: classData?.name,
     title: title,
     armor: attributes.ac.value,
-    luck: luck.available ? "●" : "○",
+    luck: luck?.available ? "●" : "○",
     picture: c.img,
     hp: {
       value: attributes.hp.value,
@@ -77,6 +77,8 @@ function hpStatus(percent) {
 }
 
 function getTitle(level, alignment, titles) {
+  if (!titles) return "";
+
   for (const title of titles) {
     if (level >= title.from && level <= title.to) {
       switch (alignment.toLowerCase()) {
