@@ -1,4 +1,14 @@
+import { isGm } from "./utils.js";
+
 export function getCharacter() {
+  if (isGm()) {
+    const tokens = canvas.tokens.controlled;
+    if (tokens.length === 0 || tokens.length > 1) return null;
+
+    const token = tokens[0];
+    return game.actors.get(token.document.actorId);
+  }
+
   let character = game.users.get(game.userId).character;
   if (!character) {
     for (let actor of Array.from(game.actors.values())) {
@@ -42,6 +52,7 @@ export async function characterData(c) {
   
   return {
     id: c.id,
+    isPlayer: c.type == "Player",
     name: c.name,
     level: level.value,
     ancestry: ancestryData?.name,

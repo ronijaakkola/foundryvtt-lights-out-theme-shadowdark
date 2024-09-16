@@ -1,11 +1,13 @@
-<div class="character-info">
+<div class="character-info {{#if selected}}fade-in-up{{/if}}">
     <div class="character-info-top">
         <form class="character-attrs">
             <div class="bar-wrapper">
+                {{#if isPlayer}}
                 <div class="attr">
                     <label>{{localize "LIGHTSOUTSD.luck"}}</label>
                     <span>{{luck}}</span>
                 </div>
+                {{/if}}
 
                 <div class="attr">
                     <label>{{localize "LIGHTSOUTSD.ac"}}</label>

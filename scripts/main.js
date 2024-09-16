@@ -4,12 +4,10 @@ import {
   characterData,
 } from "./character.js";
 import * as actions from "./actions.js";
+import { isGm } from "./utils.js";
 
 Hooks.on("renderApplication", async function () {
-  if (!isGm()) {
-    await renderCharacter();
-  }
-
+  await renderCharacter();
   await renderParty();
 
   if (isGm()) {
@@ -22,11 +20,16 @@ Hooks.on("renderApplication", async function () {
 });
 
 Hooks.on("updateActor", async function (actor) {
-  if (!isGm() && actor.id === getCharacter()?.id) {
+  if (actor.id === getCharacter()?.id) {
     await renderCharacter();
   }
 
   await renderParty();
+});
+
+Hooks.on('controlToken', async function () {
+  if (!isGm() || game.settings.get("lights-out-theme-shadowdark", "disable-gm-selected-token")) return;
+  await renderCharacter(true);
 });
 
 Hooks.once("init", async () => {
@@ -55,6 +58,16 @@ Hooks.once('ready', () => {
   game.settings.register("lights-out-theme-shadowdark", "hide-pc-title", {
     name: game.i18n.localize("LIGHTSOUTSD.config_hide_pc_title"),
     hint: game.i18n.localize("LIGHTSOUTSD.config_hide_pc_title_help"),
+    scope: "world",
+    config: true,
+    requiresReload: true,
+    type: Boolean,
+    default: false
+  });
+
+  game.settings.register("lights-out-theme-shadowdark", "disable-gm-selected-token", {
+    name: game.i18n.localize("LIGHTSOUTSD.config_disable_gm_selected_token"),
+    hint: game.i18n.localize("LIGHTSOUTSD.config_disable_gm_selected_token_help"),
     scope: "world",
     config: true,
     requiresReload: true,
@@ -113,16 +126,17 @@ function setupHealthPointsTracker(element) {
   });
 }
 
-function isGm() {
-  return game.users.get(game.userId).isGM;
-}
-
-async function renderCharacter() {
+async function renderCharacter(s = false) {
   const elem = document.getElementById("player-character");
   if (!elem) return;
 
   const character = getCharacter();
-  if (!character) return;
+  console.log(JSON.stringify(character))
+  if (!character) {
+    elem.parentNode.removeChild(elem);
+    $("body.game").append('<div id="player-character"></div>');
+    return;
+  }
 
   const data = await characterData(character);
   if (!data) return;
@@ -131,6 +145,9 @@ async function renderCharacter() {
     hide_title: game.settings.get("lights-out-theme-shadowdark", "hide-pc-title"),
   }
   data.settings = settings;
+
+  // Mark if the render was triggered by a selection
+  data.selected = s;
 
   const tpl = await renderTemplate(
     "modules/lights-out-theme-shadowdark/templates/character.hbs",
