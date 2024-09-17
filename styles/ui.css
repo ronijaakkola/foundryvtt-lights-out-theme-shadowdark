@@ -583,6 +583,7 @@ div#camera-views #players {
   font-weight: bold;
   text-align: center;
   text-shadow: 0 0 5px var(--shadow-text);
+  margin-bottom: -4px;
 }
 
 #player-character .character-race-class {
@@ -726,11 +727,12 @@ div#camera-views #players {
 
 #player-character .character-attrs .attr label {
   font-weight: bold;
-  color: var(--color-primary);
+  color: var(--color-primary-medium);
   letter-spacing: 0.1em;
   font-size: 0.8em;
   text-transform: uppercase;
   line-height: 1em;
+  margin-bottom: 4px;
 }
 
 #player-character .character-attrs .attr span {
