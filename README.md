@@ -1,7 +1,14 @@
-# Lights Out - Shadowdark theme for FoundryVTT
-This module adds a darker and more fitting user interface theme for the Shadowdark system in the FoundryVTT platform. This module has been modified and adapted for the Shadowdark system from [erizocosmico's Fancy UI 5e module](https://github.com/erizocosmico/foundryvtt-fancy-ui-5e).
+<h1 align="center">Lights Out - Shadowdark theme for FoundryVTT</h1>
+<p align="center">
+  <img src="https://img.shields.io/github/v/tag/ronijaakkola/foundryvtt-lights-out-theme-shadowdark?style=flat&label=version&labelColor=white&color=black&link=https%3A%2F%2Fgithub.com%2Fronijaakkola%2Ffoundryvtt-lights-out-theme-shadowdark%2Freleases%2Ftag%2Fv0.3" />
+  <img src="https://img.shields.io/github/downloads/ronijaakkola/foundryvtt-lights-out-theme-shadowdark/module.zip?style=flat&labelColor=white&color=black" />
+</p>
+
+<p align="center"><i>This module adds a darker and more fitting user interface theme for the Shadowdark system in the FoundryVTT platform. This module has been modified and adapted for the Shadowdark system from <a href="https://github.com/erizocosmico/foundryvtt-fancy-ui-5e">erizocosmico's Fancy UI 5e module</a></i>.</p>
 
 ![lights-out-theme-example](https://github.com/user-attachments/assets/27912147-d0a4-403d-bff7-10e6e9f4a602)
+
+<hr />
 
 ## How to install
 While the theme is in beta, it is only possible to install it by adding the manifest URL to FoundryVTT manually. To do this:
