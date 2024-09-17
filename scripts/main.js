@@ -108,7 +108,6 @@ async function renderCharacter(s = false) {
   if (!elem) return;
 
   const character = getCharacter();
-  console.log(JSON.stringify(character))
   if (!character) {
     elem.parentNode.removeChild(elem);
     $("body.game").append('<div id="player-character"></div>');

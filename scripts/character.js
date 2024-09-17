@@ -39,6 +39,8 @@ export function getPartyCharacters() {
 export async function characterData(c) {
   const { attributes, level, luck, alignment } = c.system;
 
+  const pulpMode = game.settings.get("shadowdark", "usePulpMode");
+
   const classData = await fromUuid(c.system.class);
   const ancestryData = await fromUuid(c.system.ancestry);
 
@@ -48,6 +50,14 @@ export async function characterData(c) {
   let hpPercent = (attributes.hp.value / attributes.hp.max) * 100;
   if (hpPercent >= 99) {
     hpPercent = 99;
+  }
+
+  let luckValue;
+  if (pulpMode) {
+    luckValue = luck?.remaining;
+  }
+  else {
+    luckValue = luck?.available ? "●" : "○"
   }
   
   return {
@@ -59,7 +69,7 @@ export async function characterData(c) {
     class: classData?.name,
     title: title,
     armor: attributes.ac.value,
-    luck: luck?.available ? "●" : "○",
+    luck: luckValue,
     picture: c.img,
     hp: {
       value: attributes.hp.value,
