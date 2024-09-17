@@ -7,7 +7,16 @@ import * as actions from "./actions.js";
 import { isGm } from "./utils.js";
 import { registerSettings } from "./settings.js";
 
+let init = false;
+
 Hooks.on("renderApplication", async function () {
+  // NOTE: Shadowdark systems light tracking calls renderApplication
+  // repeatedly. To avoid unnecessary rerenders of the UI, we will only
+  // call these on the first time around. 
+  if (init) {
+    return;
+  }
+
   await renderCharacter();
   await renderParty();
 
@@ -21,6 +30,8 @@ Hooks.on("renderApplication", async function () {
       $("#hotbar").addClass("hidden");
     }
   }
+
+  init = true;
 });
 
 Hooks.on("updateActor", async function (actor) {
