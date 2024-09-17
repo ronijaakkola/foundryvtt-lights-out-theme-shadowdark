@@ -491,8 +491,9 @@ div#camera-views #players {
 
 #player-character .character-img {
   background-size: cover;
-  width: 98px;
-  height: 98px;
+  width: 94px;
+  height: 94px;
+  margin: 2px 2px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
@@ -506,8 +507,8 @@ div#camera-views #players {
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  top: 0;
-  left: 0;
+  top: -1px;
+  left: -1px;
   position: absolute;
   background: rgba(0, 0, 0, 0.7);
   text-align: center;
