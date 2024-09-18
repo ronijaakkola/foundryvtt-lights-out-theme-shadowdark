@@ -11,6 +11,8 @@
 
 ![theme-screenshot-player-view](https://github.com/user-attachments/assets/6805e871-f0f6-483a-a5df-518e6fd3a03f)
 
+<div align="center"><sup><i>Token art owned by <a href="https://www.thearcanelibrary.com/">The Arcane Library</a>. Background art generated using Midjourney. No art assets are provided with this module.</i></sup></div>
+
 <hr />
 
 ## How to install
@@ -43,7 +45,7 @@ While the theme is in beta, it is only possible to install it by adding the mani
 ![gm-view-battle](https://github.com/user-attachments/assets/12ec27db-38bb-4ad0-b588-254478f2dd8f)
 *Game Master view in a tactical battle scene. The token that the Game Master selects will show in the middle panel.*
 
-## Recommended companion modules
+## Recommended modules
 Some features have already been well implemented and tested in other modules. Some recommended modules to finish the look are:
 
 - [Chat Portraits](https://foundryvtt.com/packages/chat-portrait) to show token art in chat messages
@@ -53,9 +55,14 @@ Some features have already been well implemented and tested in other modules. So
 - [Carousel Combat Tracker](https://foundryvtt.com/packages/combat-tracker-dock) for a sleek combat tracker
 - [Lock View](https://foundryvtt.com/packages/LockView/) for TotM scenes
   
-## Supported modules
+### Supported modules
 Since this module heavily alters Foundry's look and elements, some other modules may not work properly with it. If you are using a module that does not work, consider opening a pull request or opening an issue to add support for it.
 
 Currently, _officially_ supported modules are:
 - [ConversationHUD](https://foundryvtt.com/packages/conversation-hud)
 - [Dice Tray](https://foundryvtt.com/packages/dice-calculator)
+
+## Acknowledgements
+- [erizocosmico](https://github.com/erizocosmico) for their [Fancy UI 5e module](https://github.com/erizocosmico/foundryvtt-fancy-ui-5e). This module uses it as a base and the style and logic has been modified to support the Shadowdark system.
+- [The Arcane Library](https://www.thearcanelibrary.com) for the art assets that are seen in the screenshots
+- Evounnamed from the The Arcane Library Discord for testing the module
