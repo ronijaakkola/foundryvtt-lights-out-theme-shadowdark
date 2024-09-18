@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/github/downloads/ronijaakkola/foundryvtt-lights-out-theme-shadowdark/module.zip?style=flat&labelColor=white&color=black" />
 </p>
 
-<p align="center"><i>This module adds a darker and more fitting user interface theme for the Shadowdark system in the FoundryVTT platform. This module has been modified and adapted for the Shadowdark system from <a href="https://github.com/erizocosmico/foundryvtt-fancy-ui-5e">erizocosmico's Fancy UI 5e module</a></i>.</p>
+<p align="center"><i>This module adds a darker and more fitting user interface theme for the Shadowdark system in the FoundryVTT platform. It simplifies the player view by providing a character and party panels. These panels can be used for quick access to token hit points and other information.</i></p>
 
 ![theme-screenshot-player-view](https://github.com/user-attachments/assets/6805e871-f0f6-483a-a5df-518e6fd3a03f)
 
@@ -24,12 +24,12 @@ While the theme is in beta, it is only possible to install it by adding the mani
 5. Press "Install" button.
 
 ## Features
-- A player character panel, featuring
+- **Player character panel**
   - Showing general character info (HP, AC, luck, name, title and class)
   - Quick access to the character sheet
   - Quickly changing hit points
   - An option to show GM's selected token in character panel
-- A party panel, features
+- **Party panel**
   - Showing all party members and their hit points
   - Quickly changing hit points of a certain party member
 - Hiding unnecessary UI elements from players (navigation, player list, hotbar)
