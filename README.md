@@ -1,8 +1,16 @@
 <h1 align="center">Lights Out - Shadowdark theme for FoundryVTT</h1>
 <p align="center">
-  <img src="https://img.shields.io/github/v/tag/ronijaakkola/foundryvtt-lights-out-theme-shadowdark?style=flat&label=version&labelColor=white&color=black&link=https%3A%2F%2Fgithub.com%2Fronijaakkola%2Ffoundryvtt-lights-out-theme-shadowdark%2Freleases%2Ftag%2Fv0.3" />
+  <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fronijaakkola%2Ffoundryvtt-lights-out-theme-shadowdark%2Fmain%2Fmodule.json&query=%24.compatibility.verified&logo=foundryvirtualtabletop&logoColor=white&label=Foundry%20version&labelColor=%23FE6A1F&color=black" />
+  <img src="https://img.shields.io/badge/system-shadowdark-black?labelColor=white" />
+  <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fronijaakkola%2Ffoundryvtt-lights-out-theme-shadowdark%2Fmain%2Fmodule.json&query=%24.version&logoColor=white&label=version&labelColor=white&color=black" />
   <img src="https://img.shields.io/github/downloads/ronijaakkola/foundryvtt-lights-out-theme-shadowdark/module.zip?style=flat&labelColor=white&color=black" />
+
+  
+
 </p>
+
+
+
 
 <p align="center"><i>This module adds a darker and more fitting user interface theme for the Shadowdark system in the FoundryVTT platform. This module has been modified and adapted for the Shadowdark system from <a href="https://github.com/erizocosmico/foundryvtt-fancy-ui-5e">erizocosmico's Fancy UI 5e module</a></i>.</p>
 
