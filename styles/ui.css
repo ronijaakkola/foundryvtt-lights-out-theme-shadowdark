@@ -333,7 +333,8 @@ a.inline-roll {
 }
 
 .shadowdark.item-card .card-header img,
-.shadowdark.roll-card .card-header img {
+.shadowdark.roll-card .card-header img,
+.shadowdark.light-source-card .card-header img {
   border: 1px solid var(--color-primary-dark);
   border-radius: 50%;
 }
