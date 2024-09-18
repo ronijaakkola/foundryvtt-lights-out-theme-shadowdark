@@ -1,8 +1,8 @@
 {
     "id": "lights-out-theme-shadowdark",
-    "title": "Lights Out theme for Shadowdark",
-    "description": "A polished UI for Shadowdark with party and character panels.",
-    "version": "0.3",
+    "title": "Shadowdark Lights Out Theme",
+    "description": "A darker and polished UI theme for Shadowdark with party and character panels.",
+    "version": "0.4",
     "authors": [
         {
             "name": "Roni Helppi",
