@@ -1,20 +1,15 @@
 <h1 align="center">Lights Out - Shadowdark theme for FoundryVTT</h1>
+<p align="center"><sup><i>Let There Be Darkness...</i></sup></p>
 <p align="center">
   <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fronijaakkola%2Ffoundryvtt-lights-out-theme-shadowdark%2Fmain%2Fmodule.json&query=%24.compatibility.verified&logo=foundryvirtualtabletop&logoColor=white&label=Foundry%20version&labelColor=%23FE6A1F&color=black" />
   <img src="https://img.shields.io/badge/system-shadowdark-black?labelColor=white" />
   <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fronijaakkola%2Ffoundryvtt-lights-out-theme-shadowdark%2Fmain%2Fmodule.json&query=%24.version&logoColor=white&label=version&labelColor=white&color=black" />
   <img src="https://img.shields.io/github/downloads/ronijaakkola/foundryvtt-lights-out-theme-shadowdark/module.zip?style=flat&labelColor=white&color=black" />
-
-  
-
 </p>
-
-
-
 
 <p align="center"><i>This module adds a darker and more fitting user interface theme for the Shadowdark system in the FoundryVTT platform. This module has been modified and adapted for the Shadowdark system from <a href="https://github.com/erizocosmico/foundryvtt-fancy-ui-5e">erizocosmico's Fancy UI 5e module</a></i>.</p>
 
-![lights-out-theme-example](https://github.com/user-attachments/assets/27912147-d0a4-403d-bff7-10e6e9f4a602)
+![theme-screenshot-player-view](https://github.com/user-attachments/assets/6805e871-f0f6-483a-a5df-518e6fd3a03f)
 
 <hr />
 
@@ -37,6 +32,16 @@ While the theme is in beta, it is only possible to install it by adding the mani
   - Quickly changing hit points of a certain party member
 - Hiding unnecessary UI elements from players (navigation, player list, hotbar)
 - Improved dark mode UI for Shadowdark's chat messages
+
+## Screenshots
+![player-view-totm](https://github.com/user-attachments/assets/6805e871-f0f6-483a-a5df-518e6fd3a03f)
+*Player view in a TotM scene. Players can always see their character in middle panel as well as their party.*
+
+![player-view-battle](https://github.com/user-attachments/assets/26270613-2877-48a0-b304-11bb49c1fb71)
+*Player view in a tactical battle scene.*
+
+![gm-view-battle](https://github.com/user-attachments/assets/12ec27db-38bb-4ad0-b588-254478f2dd8f)
+*Game Master view in a tactical battle scene. The token that the Game Master selects will show in the middle panel.*
 
 ## Recommended companion modules
 Some features have already been well implemented and tested in other modules. Some recommended modules to finish the look are:
