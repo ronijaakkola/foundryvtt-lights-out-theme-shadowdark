@@ -2,6 +2,7 @@ import {
   getCharacter,
   getPartyCharacters,
   characterData,
+  tokenData
 } from "./character.js";
 import * as actions from "./actions.js";
 import { isGm } from "./utils.js";
@@ -16,6 +17,8 @@ Hooks.on("renderApplication", async function () {
   if (init) {
     return;
   }
+
+  console.log("renderApplication");
 
   await renderCharacter();
   await renderParty();
@@ -35,10 +38,10 @@ Hooks.on("renderApplication", async function () {
 });
 
 Hooks.on("updateActor", async function (actor) {
-  if (actor.id === getCharacter()?.id) {
+  if (isGm() || actor.id === getCharacter()?.id) {
     await renderCharacter();
   }
-
+  
   await renderParty();
 });
 
@@ -92,24 +95,39 @@ function setupHealthPointsTracker(element) {
     e.preventDefault();
     e.stopPropagation();
 
-    const actor = game.actors.get(this.dataset.id);
+    let actor;
+    if (this.dataset.token === "true") {
+      let scene = game.canvas.scene;
+      actor = scene.tokens.find(item => item.delta.id === this.dataset.id).actor;
+    }
+    else {
+      actor = game.actors.get(this.dataset.id);
+    }
+
     if (!actor) {
       return;
     }
 
-    const current = this.dataset.value;
-    const text = this.value.trim();
+    const currentHP = this.dataset.value;
+    const inputValue = this.value.trim();
 
-    let hpChange;
-    if (text.startsWith("+") || text.startsWith("-")) {
-      hpChange = -Number(text);
+    let damageAmount;
+    let multiplier;
+
+    if (inputValue.startsWith('+')) {
+      damageAmount = parseInt(inputValue.slice(1), 10);
+      multiplier = -1;
+    } else if (inputValue.startsWith('-')) {
+      damageAmount = parseInt(inputValue.slice(1), 10);
+      multiplier = 1;
     } else {
-      const num = Number(text);
-      hpChange = num > current ? -(num - current) : current - num;
+      const newHP = parseInt(inputValue, 10);
+      damageAmount = currentHP - newHP;
+      multiplier = 1; 
     }
 
-    if (!isNaN(hpChange)) {
-      actor.update({ ["system.attributes.hp.value"]: current-hpChange});
+    if (!isNaN(damageAmount)) {
+      actor.applyDamage(damageAmount, multiplier);
     }
   });
 }
@@ -125,7 +143,14 @@ async function renderCharacter(s = false) {
     return;
   }
 
-  const data = await characterData(character);
+  let data;
+  if (character.prototypeToken) {
+    data = await characterData(character);
+  }
+  else {
+    data = await tokenData(character);
+  }
+
   if (!data) return;
 
   const settings = {

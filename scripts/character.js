@@ -6,7 +6,12 @@ export function getCharacter() {
     if (tokens.length === 0 || tokens.length > 1) return null;
 
     const token = tokens[0];
-    return game.actors.get(token.document.actorId);
+    if (token.document.actorLink) {
+      return game.actors.get(token.document.actorId);
+    }
+    else {
+      return token.document;
+    }
   }
 
   let character = game.users.get(game.userId).character;
@@ -47,10 +52,7 @@ export async function characterData(c) {
   const titleData = classData?.system.titles;
   const title = getTitle(level.value, alignment, titleData);
 
-  let hpPercent = (attributes.hp.value / attributes.hp.max) * 100;
-  if (hpPercent >= 99) {
-    hpPercent = 99;
-  }
+  let hpPercent = calculateHpPercent(attributes.hp.value, attributes.hp.max);
 
   let luckValue;
   if (pulpMode) {
@@ -63,6 +65,7 @@ export async function characterData(c) {
   return {
     id: c.id,
     isPlayer: c.type == "Player",
+    isToken: false,
     name: c.name,
     level: level.value,
     ancestry: ancestryData?.name,
@@ -80,6 +83,54 @@ export async function characterData(c) {
   };
 }
 
+export async function tokenData(t) {
+  const actor = game.actors.get(t.actorId);
+  const actorSystem = actor.system;
+  const tokenSystem = t.delta.system;
+
+  const actorData = {
+    name: actor.name,
+    id: actor.id,
+    level: actorSystem.level.value,
+    armor: actorSystem.attributes.ac.value,
+    picture: actor.img,
+  }
+
+  const tokenData = {
+    name: t.delta.name,
+    id: t.delta.id,
+    level: tokenSystem.level?.value,
+    armor: tokenSystem.attributes?.ac?.value,
+    picture: t.delta.img,
+  }
+
+  const hp = tokenSystem.attributes?.hp.value ?? actorSystem.attributes?.hp.value;
+  const hpMax = tokenSystem.attributes?.hp.max ?? actorSystem.attributes?.hp.max;
+  const hpPercent = calculateHpPercent(hp, hpMax);
+
+  // Combine actor and token data. This way we can
+  // show what is actually set in the sheet.
+  return {
+    id: tokenData.id ?? actorData.id,
+    isPlayer: false,
+    isToken: true,
+    name: tokenData.name ?? actorData.name,
+    level: tokenData.level ?? actorData.level,
+    armor: tokenData.armor ?? actorData.armor,
+    picture: tokenData.picture ?? actorData.picture,
+    hp: {
+      value: hp,
+      max: hpMax,
+      percent: hpPercent,
+      status: hpStatus(hpPercent),
+    },
+  };
+}
+
+function calculateHpPercent(v, m) {
+  const percent = (v / m) * 100;
+  return percent >= 99 ? 99 : percent;
+}
 
 function hpStatus(percent) {
   if (percent <= 25) {

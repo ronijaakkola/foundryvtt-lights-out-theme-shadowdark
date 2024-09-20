@@ -33,7 +33,7 @@
             <div class="bar-wrapper">
                 <div class="bar {{hp.status}}" style="width: {{hp.percent}}%"></div>
 
-                <input type="text" id="current-health" data-value="{{hp.value}}" data-id="{{id}}"
+                <input type="text" id="current-health" data-value="{{hp.value}}" data-id="{{id}}" data-token={{isToken}}
                     value="{{hp.value}}" />
                 <span class="divider">/</span>
                 <input type="text" value="{{hp.max}}" disabled />
