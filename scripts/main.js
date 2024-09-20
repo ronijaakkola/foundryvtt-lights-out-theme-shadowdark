@@ -18,8 +18,6 @@ Hooks.on("renderApplication", async function () {
     return;
   }
 
-  console.log("renderApplication");
-
   await renderCharacter();
   await renderParty();
 
