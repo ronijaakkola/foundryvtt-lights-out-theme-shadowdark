@@ -1,5 +1,14 @@
 export function openSheet() {
-  let actor = game.actors.get(this.dataset.character);
+  let actor;
+
+  if (this.dataset.token === "true") {
+    let scene = game.canvas.scene;
+    actor = scene.tokens.find(item => item.delta.id === this.dataset.id).actor;
+  }
+  else {
+    actor = game.actors.get(this.dataset.id);
+  }
+
   if (actor) {
     actor.sheet.render(true);
   }
