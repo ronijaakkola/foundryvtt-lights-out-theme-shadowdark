@@ -62,6 +62,11 @@ Hooks.once('ready', () => {
   registerSettings();
 });
 
+Hooks.on('updateUser', async function () {
+  await renderCharacter();
+  await renderParty();
+});
+
 function activatePlayerListeners() {
   $(document).on("click", "#player-character .sheet", actions.openSheet);
   setupHealthPointsTracker("#current-health");
