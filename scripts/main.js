@@ -11,16 +11,6 @@ import { registerSettings } from "./settings.js";
 let init = false;
 
 Hooks.on("renderApplication", async function () {
-  // NOTE: Shadowdark systems light tracking calls renderApplication
-  // repeatedly. To avoid unnecessary rerenders of the UI, we will only
-  // call these on the first time around. 
-  if (init) {
-    return;
-  }
-
-  await renderCharacter();
-  await renderParty();
-
   if (isGm()) {
     $("#players").removeClass("hidden");
     $("#hotbar").removeClass("hidden");
@@ -32,7 +22,14 @@ Hooks.on("renderApplication", async function () {
     }
   }
 
-  init = true;
+  // NOTE: Shadowdark systems light tracking calls renderApplication
+  // repeatedly. To avoid unnecessary rerenders of the UI, we will only
+  // call these on the first time around. 
+  if (!init) {
+    await renderCharacter();
+    await renderParty();
+    init = true;
+  }
 });
 
 Hooks.on("updateActor", async function (actor) {
