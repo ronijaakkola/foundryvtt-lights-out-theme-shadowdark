@@ -910,3 +910,11 @@ div#camera-views #players {
     box-shadow: 0 0 6px inset var(--color-primary);
   }
 }
+
+/**
+ * Module: GM Screen
+ */
+
+.gm-screen-app.gm-screen-drawer {
+  margin-right: 32px;
+}
