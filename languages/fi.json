@@ -1,0 +1,13 @@
+{
+	"LIGHTSOUTSD.ac": "Puolustus",
+	"LIGHTSOUTSD.luck": "Tuuri",
+	"LIGHTSOUTSD.open_sheet": "Avaa hahmoikkuna",
+	"LIGHTSOUTSD.config_party_only_active": "Näytä vain paikallaolevat hahmot",
+	"LIGHTSOUTSD.config_party_only_active_help": "Näytä vain hahmot, jotka ovat paikalla vasemmanpuoleisessa listauksessa. Tämä voi tulla tarpeeseen, jos kaikki pelaajat eivät aina ole mukana tai jos järjestät avoimia pelejä.",
+	"LIGHTSOUTSD.config_hide_pc_title": "Piilota hahmon arvonimi ja hahmoluokka",
+	"LIGHTSOUTSD.config_hide_pc_title_help": "Piilota hahmon arvonimi ja hahmoluokka hahmopaneelista.",
+	"LIGHTSOUTSD.config_disable_gm_selected_token": "Älä näytä pelinjohtajan valitsemaa tokenia",
+	"LIGHTSOUTSD.config_disable_gm_selected_token_help": "Älä näytä hahmopaneelia pelinjohtajan valitsemalle tokenille.",
+	"LIGHTSOUTSD.config_show_player_hotbar": "Näytä pikavalikko pelaajille",
+	"LIGHTSOUTSD.config_show_player_hotbar_help": "Oletuksena teema piilottaa pikavalikon pelaajilta. Jos haluat näyttää sen, kytke tämä valita päälle. Tämä voi tulla tarpeeseen, jos pelaajiesi täytyy pystyä käyttämään makroja nopeasti."
+}

@@ -23,6 +23,12 @@
             "name": "English",
             "path": "languages/en.json",
             "flags": {}
+        },
+        {
+            "lang": "fi",
+            "name": "suomi",
+            "path": "languages/fi.json",
+            "flags": {}
         }
     ],
     "compatibility": {
