@@ -62,6 +62,11 @@ Hooks.once('ready', () => {
   registerSettings();
 });
 
+Hooks.on('userConnected', async function () {
+  await renderCharacter();
+  await renderParty();
+});
+
 Hooks.on('updateUser', async function () {
   await renderCharacter();
   await renderParty();
