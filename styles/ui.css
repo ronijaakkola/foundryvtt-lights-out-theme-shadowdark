@@ -465,6 +465,48 @@ div#camera-views #players {
 }
 
 /**
+ * Effect panel
+ */
+#effect-panel-drag-handler {
+
+}
+
+section.effect-panel .effect-item {
+  height: 32px;
+}
+
+section.effect-panel .icon {
+  width: 32px;
+  height: 32px;
+}
+
+section.effect-panel .icon {
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+section.effect-panel hr {
+  width: 32px;
+  margin-bottom: 3px;
+  border-top: none;
+  border-color: var(--color-primary-medium);
+}
+
+section.effect-panel .icon .badge.unlimited {
+  color: var(--color-primary-medium)
+}
+
+section.effect-panel {
+  top: 0 !important;
+  right: 450px !important;
+  padding-top: 14px;
+}
+
+.effect-info > h1 {
+  font-family: "Old Newspaper Font";
+}
+
+/**
  * Player Character HUD
  */
 
