@@ -468,7 +468,6 @@ div#camera-views #players {
  * Effect panel
  */
 #effect-panel-drag-handler {
-
 }
 
 section.effect-panel .effect-item {
@@ -493,7 +492,7 @@ section.effect-panel hr {
 }
 
 section.effect-panel .icon .badge.unlimited {
-  color: var(--color-primary-medium)
+  color: var(--color-primary-medium);
 }
 
 section.effect-panel {
@@ -954,5 +953,10 @@ section.effect-panel {
  */
 
 .gm-screen-app.gm-screen-drawer {
-  margin-right: 32px;
+  --gm-screen-right-offset: 2vw !important;
+}
+
+.gm-screen-button,
+.gm-screen-tabs {
+  font-family: "Old Newspaper Font";
 }
