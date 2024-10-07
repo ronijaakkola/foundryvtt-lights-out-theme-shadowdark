@@ -1,28 +1,3 @@
-@font-face {
-  font-family: "JSL Blackletter";
-  src: url("../fonts/JBLACK.TTF") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat-Medium";
-  src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat-SemiBold";
-  src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat-Bold";
-  src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-
 :root {
   --color-primary: #eaeaea;
   --color-primary-medium: #d3d3d3;
@@ -35,10 +10,6 @@
 
   --color-bar-border: linear-gradient(180deg, #e8e8e8, #cdcdcd);
   --shadow-text: rgba(0, 0, 0, 0.9);
-
-  --font-header: "JSL Blackletter", sans-serif;
-  --font-body: "Montserrat", sans-serif;
-
   --color-chat-msg-bg: #111111;
   --color-chat-msg-text: #dddddd;
 
@@ -54,6 +25,10 @@
     * Overriding Foundry variable styles
     */
   --sidebar-width: 350px;
+}
+
+body {
+    --font-body: "Montserrat-Medium", sans-serif;
 }
 
 * {

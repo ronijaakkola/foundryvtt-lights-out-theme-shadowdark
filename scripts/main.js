@@ -46,6 +46,7 @@ Hooks.on('controlToken', async function () {
 });
 
 Hooks.once("init", async () => {
+    registerSettings();
   $("body.game").append('<div id="player-character"></div>');
   $("section#ui-left").append('<div id="party"></div>');
 
@@ -56,10 +57,6 @@ Hooks.once("init", async () => {
 
   activatePlayerListeners();
   activatePartyListeners();
-});
-
-Hooks.once('ready', () => {
-  registerSettings();
 });
 
 Hooks.on('userConnected', async function () {
