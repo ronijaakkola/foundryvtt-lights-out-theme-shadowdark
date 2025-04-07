@@ -68,6 +68,10 @@ textarea:focus {
   justify-content: initial !important;
 }
 
+#ui-top.offset {
+  margin-left: 0;
+}
+
 /**
  * Sidebar
  */
