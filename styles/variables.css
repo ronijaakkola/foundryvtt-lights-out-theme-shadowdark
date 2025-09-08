@@ -119,3 +119,15 @@
   --input-focus-outline-color: var(--lights-out-color-foreground-secondary);
   --input-placeholder-color: var(--lights-out-color-foreground-secondary);
 }
+
+.themed.theme-light #players,
+.themed.theme-dark #players {
+  --background-color: var(--lights-out-color-background-primary);
+  --border-color: var(--lights-out-color-foreground-secondary);
+}
+
+.themed.theme-light#context-menu,
+.themed.theme-dark#context-menu {
+  --background-color: var(--lights-out-color-background-primary);
+  --border-color: var(--lights-out-color-foreground-secondary);
+}

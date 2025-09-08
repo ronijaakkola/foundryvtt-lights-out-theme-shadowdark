@@ -274,6 +274,13 @@
   }
 
   /**
+  * Context Menu
+  */
+  #context-menu {
+    border-radius: var(--lights-out-border-radius-small);
+  }
+
+  /**
   * Player list
   */
   #players {
@@ -281,6 +288,10 @@
   }
 
   #players #players-active {
+    border-radius: var(--lights-out-border-radius-small);
+  }
+
+  #players #players-inactive {
     border-radius: var(--lights-out-border-radius-small);
   }
 }
