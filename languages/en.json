@@ -9,6 +9,8 @@
 	"LIGHTSOUTSD.config_hide_pc_title_help": "Hide PC's title and class below the character panel.",
 	"LIGHTSOUTSD.config_disable_gm_selected_token": "Hide GM's Selected Token",
 	"LIGHTSOUTSD.config_disable_gm_selected_token_help": "Disable showing GM's selected token information in the character panel.",
+	"LIGHTSOUTSD.config_use_foundry_interface_fading": "Use Foundry's Interface Fading",
+	"LIGHTSOUTSD.config_use_foundry_interface_fading_help": "Use Foundry's built-in interface fading settings to fade out party and character panels when not in use.",
     "LIGHTSOUTSD.config_hotbar_visibility": "Hotbar Visibility",
     "LIGHTSOUTSD.config_hotbar_visibility_help": "Controls who can see the Foundry Hotbar.",
     "LIGHTSOUTSD.config_player_list_visibility": "Players List Visibility",

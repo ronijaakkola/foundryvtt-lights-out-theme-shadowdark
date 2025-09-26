@@ -41,7 +41,7 @@ export class PartyPanelApp extends HandlebarsApplicationMixin(ApplicationV2) {
         return {
             hidePartyHealth: isGM ? false : hidePartyHealth, // GMs always sees health
             userCharacterUuid: userCharacterUuid,
-            characters: this.partyData
+            characters: this.partyData,
         };
     }
 
@@ -66,6 +66,11 @@ export class PartyPanelApp extends HandlebarsApplicationMixin(ApplicationV2) {
             }
         } else {
             anchor.insertAdjacentElement("afterend", element);
+        }
+
+        const fade = game.settings.get("lights-out-theme-shadowdark", "use-foundry-interface-fading");
+        if (fade) {
+            element.classList.add("faded-ui");
         }
     }
 

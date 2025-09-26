@@ -1,6 +1,5 @@
 .lights-out-fade-in-up {
   opacity: 1;
-  animation: lightsOutfadeInUp 0.3s ease-out forwards;
 }
 
 @keyframes lightsOutfadeInUp {
@@ -13,7 +12,7 @@
 }
 
 .lights-out-fade-out {
-  animation: lightsOutfadeOut 0.15s ease-out forwards;
+  opacity: 0;
 }
 
 @keyframes lightsOutfadeOut {

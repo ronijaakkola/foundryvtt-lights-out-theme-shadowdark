@@ -102,6 +102,16 @@ export function registerSettings() {
         default: false
     });
 
+    game.settings.register("lights-out-theme-shadowdark", "use-foundry-interface-fading", {
+        name: game.i18n.localize("LIGHTSOUTSD.config_use_foundry_interface_fading"),
+        hint: game.i18n.localize("LIGHTSOUTSD.config_use_foundry_interface_fading_help"),
+        scope: "world",
+        config: true,
+        requiresReload: true,
+        type: Boolean,
+        default: false
+    });
+
     game.settings.register("lights-out-theme-shadowdark", "icon-high-contrast-mode", {
         name: game.i18n.localize("LIGHTSOUTSD.config_icon_high_contrast_mode"),
         hint: game.i18n.localize("LIGHTSOUTSD.config_icon_high_contrast_mode_help"),

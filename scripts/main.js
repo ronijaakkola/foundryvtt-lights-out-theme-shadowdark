@@ -133,13 +133,6 @@ async function renderCharacter(selection = false) {
   let data = await getEntityData(character);
   if (!data) return;
 
-  /*
-  const settings = {
-    hide_title: game.settings.get("lights-out-theme-shadowdark", "hide-pc-title"),
-  }
-  data.settings = settings;
-  */
-
   // Mark if the render was triggered by a selection
   data.selected = selection;
 
